@@ -24,8 +24,8 @@ int main (){
             break;
             
         case 2:
+            seeLibrary();
             break;
-            
         case 3: 
             
             cout << "\nInsert the name of the book: ";

@@ -1,9 +1,24 @@
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <string>
 #include "Header.hpp"
 
 using namespace std;
+
+void seeLibrary(){
+    string content;
+    stringstream buffer;
+    ifstream library("library.txt");
+    if(library.is_open()){
+        buffer << library.rdbuf();
+        content = buffer.str();
+        cout << content << endl;
+    }
+    else{
+        cout << "could not open file sowy";
+    }
+}
 
 int streakUp(bookS book, fstream library){
     
