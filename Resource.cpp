@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <iterator>
 #include <sstream>
 #include <string>
 #include "Header.hpp"
@@ -8,12 +9,13 @@ using namespace std;
 
 void seeLibrary(){
     string content;
-    stringstream buffer;
+    
     ifstream library("library.txt");
     if(library.is_open()){
-        buffer << library.rdbuf();
-        content = buffer.str();
-        cout << content << endl;
+        content.assign((istreambuf_iterator<char>(library)),istreambuf_iterator<char>());
+        for ( size_t i = 0; i < content.size(); i++){
+            cout << content[i];
+            }
     }
     else{
         cout << "could not open file sowy";
