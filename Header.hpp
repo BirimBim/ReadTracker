@@ -4,7 +4,8 @@ using namespace std;
 struct bookS{
     string name;
     int pageAmount;
-    int completion;
+    int deadLine;
+    int pagesPerDay;
 };
 
 void seeLibrary();

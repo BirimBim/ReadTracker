@@ -33,6 +33,8 @@ int main (){
             transform(book.name.begin(), book.name.end(), book.name.begin(), ::tolower);
             cout << "\nInsert the amout of pages your book has: ";
             cin >> book.pageAmount;
+            cout << "\nInsert the amount of days you would like to finish this book on: ";
+            cin >> book.deadLine;
             saveBook(book);
             break;
         default:
