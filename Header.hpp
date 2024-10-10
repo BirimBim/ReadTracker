@@ -12,4 +12,4 @@ void seeLibrary();
 
 void saveBook(bookS book);
 
-int streakUp(bookS book);
+int streakUp(bookS book);//gia
